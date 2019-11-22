@@ -5,8 +5,10 @@ const VerticalLink = styled.a`
   display: block;
   writing-mode: vertical-rl;
   transition: color 0.5s ease;
-  padding: 16px 8px;
+  padding: 18px 6px;
+  font-size: 18px;
   color: #262626;
+  cursor: pointer;
 `;
 
 const Background = styled.div`
@@ -24,8 +26,9 @@ const Background = styled.div`
 
 const Container = styled.div`
   position: relative;
-  height: 100%;
   z-index: 1;
+  transition: transform 0.5s ease;
+  transform: translateY(0);
 
   & + & {
     margin-left: 8px;
@@ -37,6 +40,10 @@ const Container = styled.div`
 
   &:hover > ${Background} {
     transform: scaleY(1);
+  }
+
+  &:hover {
+    transform: translateY(8px);
   }
 `;
 

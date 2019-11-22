@@ -1,0 +1,1 @@
+fontmin ./font/SourceHanSerifSC-Regular.ttf ./src/assets/ --text 博客代码托管文件分享监控RustCrates下载代理Shyriidelbertbeta索引 --font-family SourceHanSerifSC
