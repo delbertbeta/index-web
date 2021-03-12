@@ -86,6 +86,15 @@ const HiddenLinks = styled(LinkContainer)<IHoverProps>`
   opacity: ${props => props.isHover ? 1 : 0};
 `;
 
+const ICPStaff = styled.a`
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  font-size: 14px;
+  color: #262626;
+  text-decoration: underline;
+`;
+
 const App: React.FC = () => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const handleMouseEnter = useCallback(() => setIsHover(true), []);
@@ -102,14 +111,18 @@ const App: React.FC = () => {
           <Link content="❤ Shyrii" url="javascipt:void" />
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
-          <Link content="博客" url="https://delbertbeta.cc" />
-          <Link content="代码托管" url="https://code.delbertbeta.cc" />
-          <Link content="文件分享" url="https://rajio.delbertbeta.cc" />
+          <Link content="博客" url="https://delbertbeta.life" />
+          <Link content="With Shyrii" url="https://shyrii.delbertbeta.life" />
+          <Link content="代码托管" url="https://code.delbertbeta.life" />
+          <Link content="文件分享" url="https://rajio.delbertbeta.life" />
+          {/*
           <Link content="监控" url="https://grafana.delbertbeta.cc" />
           <Link content="Rust Crates" url="https://grafana.delbertbeta.cc" />
           <Link content="下载代理" url="https://code.delbertbeta.cc/delbertbeta/proxy-downloader" />
+          */}
         </StandardLinks>
       </LinkContainer>
+      <ICPStaff href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021020587号</ICPStaff>
     </StyledContainer>
   );
 }
