@@ -111,11 +111,11 @@ const App: React.FC = () => {
           <Link content="❤ Shyrii" url="javascipt:void" />
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
-          <Link content="博客" url="https://delbertbeta.life" />
+          <Link content="博客" url="https://blog.delbertbeta.life" />
           <Link content="With Shyrii" url="https://shyrii.delbertbeta.life" />
           <Link content="代码托管" url="https://code.delbertbeta.life" />
-          <Link content="文件分享" url="https://rajio.delbertbeta.life" />
           {/*
+          <Link content="文件分享" url="https://rajio.delbertbeta.life" />
           <Link content="监控" url="https://grafana.delbertbeta.cc" />
           <Link content="Rust Crates" url="https://grafana.delbertbeta.cc" />
           <Link content="下载代理" url="https://code.delbertbeta.cc/delbertbeta/proxy-downloader" />
