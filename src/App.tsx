@@ -111,8 +111,9 @@ const App: React.FC = () => {
           <Link content="❤ Shyrii" url="javascipt:void" />
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
-          <Link content="博客" url="https://blog.delbertbeta.life" />
-          <Link content="With Shyrii" url="https://shyrii.delbertbeta.life" />
+          <Link content="博客 (x)" url="https://blog.delbertbeta.life" />
+          <Link content="With Shyrii (x)" url="https://shyrii.delbertbeta.life" />
+          <Link content="Github" url="https://github.com/delbertbeta" />
           <Link content="代码托管" url="https://code.delbertbeta.life" />
           {/*
           <Link content="文件分享" url="https://rajio.delbertbeta.life" />

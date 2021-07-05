@@ -9,6 +9,8 @@ const VerticalLink = styled.a`
   font-size: 18px;
   color: #262626;
   cursor: pointer;
+  width: 20px;
+  line-height: 20px;
 `;
 
 const Background = styled.div`
