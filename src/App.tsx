@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from './components/link';
 import { ReactComponent as LogoIcon } from './assets/icon.svg';
@@ -70,13 +70,14 @@ const SubTitle = styled.div`
 
 interface IHoverProps {
   isHover: boolean;
-}
+};
 
-const StandardLinks = styled(LinkContainer)<IHoverProps>`
+const StandardLinks = styled(LinkContainer) <IHoverProps>`
   transition: transform 0.5s ease;
   transform: translateX(${props => props.isHover ? 36 : 0}px);
 `;
-const HiddenLinks = styled(LinkContainer)<IHoverProps>`
+
+const HiddenLinks = styled(LinkContainer) <IHoverProps>`
   transition: all 0.5s ease;
   top: -4px;
   left: 46px;
@@ -111,8 +112,8 @@ const App: React.FC = () => {
           <Link content="❤ Shyrii" url="javascipt:void" />
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
-          <Link content="博客 (x)" url="https://blog.delbertbeta.life" />
-          <Link content="With Shyrii (x)" url="https://shyrii.delbertbeta.life" />
+          <Link content="博客 · 施工中" url="https://blog.delbertbeta.life" />
+          <Link content="With Shyrii · 施工中" url="https://shyrii.delbertbeta.life" />
           <Link content="Github" url="https://github.com/delbertbeta" />
           <Link content="代码托管" url="https://code.delbertbeta.life" />
           {/*
