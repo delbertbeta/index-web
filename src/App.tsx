@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import Link from './components/link';
 import { ReactComponent as LogoIcon } from './assets/icon.svg';
