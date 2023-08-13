@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { faro } from '@grafana/faro-web-sdk';
 
 const VerticalLink = styled.a`
   display: block;
@@ -57,7 +58,7 @@ interface ILinkProp {
 export default ({ content, url }: ILinkProp) => {
   return (
     <Container>
-      <VerticalLink href={url}>{content}</VerticalLink>
+      <VerticalLink href={url} onClick={() => { faro.api.pushEvent('click_link', { item: content }) }}>{content}</VerticalLink>
       <Background />
     </Container>
   );
