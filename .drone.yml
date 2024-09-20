@@ -77,5 +77,6 @@ steps:
         from_secret: deploy_s3_endpoint
       region:
         from_secret: deploy_s3_region
-      source: ./build/*
-      target: .
+      source: build/**/*
+      strip_prefix: build/
+      target: /
