@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { getWebInstrumentations, initializeFaro } from '@grafana/faro-web-sdk';
+import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 import './index.css';
 import App from './App';
 
@@ -11,9 +12,13 @@ initializeFaro({
     version: '1.0.0',
     environment: 'production'
   },
+  
   instrumentations: [
-    // Mandatory, overwriting the instrumentations array would cause the default instrumentations to be omitted
+    // Mandatory, omits default instrumentations otherwise.
     ...getWebInstrumentations(),
+
+    // Tracing package to get end-to-end visibility for HTTP requests.
+    new TracingInstrumentation(),
   ],
 });
 
