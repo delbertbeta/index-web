@@ -1,13 +1,18 @@
 ---
 kind: pipeline
-name: Build
 type: docker
+name: Build
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
 
 steps:
   - name: install deps
     image: node:20
     commands:
-      - npm i -g yarn
       - yarn
 
   - name: build
@@ -37,16 +42,16 @@ steps:
       source: dist.zip
       target: ${DRONE_REPO}/${DRONE_BUILD_NUMBER}
 
-trigger:
-  branch:
-    - main
-  event:
-    - push
-
 ---
 kind: pipeline
 type: docker
 name: Deploy
+
+trigger:
+  event:
+    - promote
+  target:
+    - production
 
 steps:
   - name: download artifact
@@ -74,9 +79,3 @@ steps:
         from_secret: deploy_s3_region
       source: ./build/*
       target: .
-
-trigger:
-  event:
-    - promote
-  target:
-    - production
