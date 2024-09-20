@@ -55,7 +55,7 @@ interface ILinkProp {
   url: string;
 }
 
-export default ({ content, url }: ILinkProp) => {
+const Link = ({ content, url }: ILinkProp) => {
   return (
     <Container>
       <VerticalLink href={url} onClick={() => { faro.api.pushEvent('click_link', { item: content }) }}>{content}</VerticalLink>
@@ -63,3 +63,5 @@ export default ({ content, url }: ILinkProp) => {
     </Container>
   );
 };
+
+export default Link;
