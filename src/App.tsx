@@ -1,7 +1,7 @@
-import React, { useCallback, useState } from 'react';
-import styled from 'styled-components';
-import Link from './components/link';
-import { ReactComponent as LogoIcon } from './assets/icon.svg';
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
+import Link from "./components/link";
+import { ReactComponent as LogoIcon } from "./assets/icon.svg";
 
 const StyledLogoIcon = styled(LogoIcon)`
   width: 16px;
@@ -70,30 +70,21 @@ const SubTitle = styled.div`
 
 interface IHoverProps {
   isHover: boolean;
-};
+}
 
-const StandardLinks = styled(LinkContainer) <IHoverProps>`
+const StandardLinks = styled(LinkContainer)<IHoverProps>`
   transition: transform 0.5s ease;
-  transform: translateX(${props => props.isHover ? 36 : 0}px);
+  transform: translateX(${(props) => (props.isHover ? 36 : 0)}px);
 `;
 
-const HiddenLinks = styled(LinkContainer) <IHoverProps>`
+const HiddenLinks = styled(LinkContainer)<IHoverProps>`
   transition: all 0.5s ease;
   top: -4px;
   left: 46px;
   position: absolute;
-  transform: translateX(${props => props.isHover ? 0 : -36}px);
+  transform: translateX(${(props) => (props.isHover ? 0 : -36)}px);
   pointer-events: none;
-  opacity: ${props => props.isHover ? 1 : 0};
-`;
-
-const ICPStaff = styled.a`
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  font-size: 14px;
-  color: #262626;
-  text-decoration: underline;
+  opacity: ${(props) => (props.isHover ? 1 : 0)};
 `;
 
 const App: React.FC = () => {
@@ -107,15 +98,21 @@ const App: React.FC = () => {
         <SubTitle>delbertbeta</SubTitle>
       </Title>
       <LinkContainer>
-        <StyledLogoIcon onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+        <StyledLogoIcon
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
         <HiddenLinks isHover={isHover}>
           <Link content="❤ Shyrii" url="javascipt:void" />
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
-          <Link content="博客 · 施工中" url="https://blog.delbertbeta.life" />
-          <Link content="With Shyrii · 施工中" url="https://shyrii.delbertbeta.life" />
+          {/* <Link content="博客 · 施工中" url="https://blog.delbertbeta.life" /> */}
+          <Link
+            content="With Shyrii · 施工中"
+            url="https://shyrii.delbertbeta.life"
+          />
           <Link content="Github" url="https://github.com/delbertbeta" />
-          <Link content="代码托管" url="https://code.delbertbeta.life" />
+          {/* <Link content="代码托管" url="https://code.delbertbeta.life" /> */}
           {/*
           <Link content="文件分享" url="https://rajio.delbertbeta.life" />
           <Link content="监控" url="https://grafana.delbertbeta.cc" />
@@ -124,9 +121,8 @@ const App: React.FC = () => {
           */}
         </StandardLinks>
       </LinkContainer>
-      <ICPStaff href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021020587号</ICPStaff>
     </StyledContainer>
   );
-}
+};
 
 export default App;

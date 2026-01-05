@@ -1,11 +1,7 @@
 @font-face {
   font-family: 'SourceHanSerifSC';
-  src: url("./assets/SourceHanSerifSC-Regular.eot");
-  src: 
-    url("./assets/SourceHanSerifSC-Regular.eot?#iefix") format("embedded-opentype"),
-    url("./assets/SourceHanSerifSC-Regular.woff") format("woff"),
-    url("./assets/SourceHanSerifSC-Regular.ttf") format("truetype"),
-    url("./assets/SourceHanSerifSC-Regular.svg#SourceHanSerifSC") format("svg");
+  src: url("./assets/SourceHanSerifSC-Regular.woff2") format("woff2"),
+       url("./assets/SourceHanSerifSC-Regular.ttf") format("truetype");
 }
 
 html, #root {
