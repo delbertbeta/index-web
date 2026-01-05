@@ -11,7 +11,7 @@ const StyledLogoIcon = styled(LogoIcon)`
   height: 32px;
   width: 32px;
 
-  & > path:nth-child(3) {
+  & > path:nth-child(2) {
     fill: #888;
   }
 
@@ -23,16 +23,16 @@ const StyledLogoIcon = styled(LogoIcon)`
     transition: fill 0.5s ease;
   }
 
-  :hover {
+  &:hover {
     & {
-      filter: drop-shadow(0 0 4px #40a9ff);
+      filter: drop-shadow(0 0 4px #ffcce9ff);
     }
-    & > path:nth-child(3) {
-      fill: #91d5ff;
+    & > path:nth-child(2) {
+      fill: #ffc2ebff !important;
     }
 
     & > path:last-child {
-      fill: #40a9ff;
+      fill: #ff9bdaff !important;
     }
   }
 `;
