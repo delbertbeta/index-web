@@ -107,10 +107,7 @@ const App: React.FC = () => {
         </HiddenLinks>
         <StandardLinks isHover={isHover}>
           {/* <Link content="博客 · 施工中" url="https://blog.delbertbeta.life" /> */}
-          <Link
-            content="With Shyrii · 施工中"
-            url="https://shyrii.delbertbeta.life"
-          />
+          <Link content="With Shyrii" url="https://shyrii.delbertbeta.life" />
           <Link content="Github" url="https://github.com/delbertbeta" />
           {/* <Link content="代码托管" url="https://code.delbertbeta.life" /> */}
           {/*
